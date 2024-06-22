@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrient Comparison</title>
+  <style>
+
+    /* Energy Comparison Section */
+h1 {
+  font-size: 2.5rem;
+  color: #3498db; /* Sky blue color */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #3498db; /* Sky blue background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+
+
+.chart-container {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html"><img src="home-icon.png" alt="Home"></a></li>
+      <li><a href="form.html">Write us</a></li>
+      <li><a href="about.html">About us</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+  <h1>Energy Comparison</h1>
+  <form>
+    <label for="item1">Select Item 1:</label>
+    <select id="item1" name="item1">
+      <option value="">Select an item</option>
+      <option value="Godrej Yummiez Chicken Nuggets">Godrej Yummiez Chicken Nuggets</option>
+      <option value="Sunfeast Yippee! Pasta Treat - Sour Cream Onion">Sunfeast Yippee! Pasta Treat - Sour Cream Onion</option>
+      <option value="MAGGI 2- Minute Instant Masala Noodles">MAGGI 2- Minute Instant Masala Noodles</option>
+      <option value="Mother's Recipe Mixed Pickle">Mother's Recipe Mixed Pickle</option>
+      <option value="McCain Veggie Fingers">McCain Veggie Fingers</option>
+      <option value="Venky's Chicken Sausages">Venky's Chicken Sausages</option>
+      <option value="McCain French Fries Crisp & Delicious">McCain French Fries Crisp & Delicious</option>
+      <option value="ITC Farmland Frozen Green Peas">ITC Farmland Frozen Green Peas</option>
+      <option value="Heritage Sweets Doodh Peda">Heritage Sweets Doodh Peda</option>
+      <option value="Chings Secret Schezwan Chutney">Chings Secret Schezwan Chutney</option>
+    </select>
+    <br><br>
+    <label for="item2">Select Item 2:</label>
+    <select id="item2" name="item2">
+      <option value="">Select an item</option>
+      <option value="Godrej Yummiez Chicken Nuggets">Godrej Yummiez Chicken Nuggets</option>
+      <option value="Sunfeast Yippee! Pasta Treat - Sour Cream Onion">Sunfeast Yippee! Pasta Treat - Sour Cream Onion</option>
+      <option value="MAGGI 2- Minute Instant Masala Noodles">MAGGI 2- Minute Instant Masala Noodles</option>
+      <option value="Mother's Recipe Mixed Pickle">Mother's Recipe Mixed Pickle</option>
+      <option value="McCain Veggie Fingers">McCain Veggie Fingers</option>
+      <option value="Venky's Chicken Sausages">Venky's Chicken Sausages</option>
+      <option value="McCain French Fries Crisp & Delicious">McCain French Fries Crisp & Delicious</option>
+      <option value="ITC Farmland Frozen Green Peas">ITC Farmland Frozen Green Peas</option>
+      <option value="Heritage Sweets Doodh Peda">Heritage Sweets Doodh Peda</option>
+      <option value="Chings Secret Schezwan Chutney">Chings Secret Schezwan Chutney</option>
+    </select>
+    <br><br>
+    <button id="compareBtn">Compare</button>
+  </form>
+  <div id="comparison-results"></div>
+  <div class="chart-container">
+    <canvas id="comparisonChart"></canvas>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="comparison.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Food Products - Packed Food Fact</title>
+  <link rel="stylesheet" href="style.css">
+
+<style>/* Container Styles */
+  .container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container h1 {
+    font-size: 2.5rem;
+    color: #3498db; /* Sky blue color */
+    margin-bottom: 20px;
+  }
+  
+  .container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3498db; /* Sky blue background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+  
+  /* Main Styles */
+  main#results {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+
+  }
+  
+  </style>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="home-icon.png" alt="Home"></a></li>
+        <li><a href="form.html">Write us</a></li>
+        <li><a href="about.html">About us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Packed Food Fact</h1>
+    <input id="searchInput" type="text" placeholder="Enter item">
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <main id="results">
+    <!-- Search results will be dynamically added here -->
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

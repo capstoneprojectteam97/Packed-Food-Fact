@@ -1,0 +1,244 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: lightgray; 
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: #3498db; /* Soft blue background */
+  margin-bottom: 50px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: font-size 0.2s ease;
+}
+
+nav ul li a:hover {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+/* Styles for Home Icon */
+nav ul li:first-child a img {
+  width: 30px; /* Adjust the size of the home icon */
+  height: auto;
+  margin-top: -5px; /* Adjust vertical alignment if needed */
+  filter: invert(1); /* Invert the color of the home icon */
+}
+
+nav ul li:first-child a img:hover {
+  opacity: 0.8; /* Reduce opacity on hover for visual feedback */
+}
+
+/* Header */
+header {
+  background-color: #f2c464; /* Warm orange background */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 5rem;
+  color: #3498db; /* Soft blue color */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.container p {
+  margin: 5px 0;
+}
+
+.container input { 
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+  height: 50px;
+  width: 400px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-decoration: solid;
+  font-style: bold;
+  background-color: white;
+}
+
+.container button {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  color: rgb(250, 240, 240);
+  background-color: rgb(44, 11, 233);
+}
+
+/* Main Sections */
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.section-link {
+  width: calc(50% - 20px); /* Adjusted width to accommodate margin */
+  margin: 10px; /* Adjusted margin for spacing */
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.section-link:hover {
+  transform: translateY(-5px);
+}
+
+.section-link h2 {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.section-link img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.leftsection {
+  background-color: #f7dc6f; /* Soft yellow background */
+}
+
+.rightsection {
+  background-color: #f2c464; /* Warm orange background */
+}
+
+/* Styles for Line Section */
+.line-section {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.line-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.line-content h2 {
+  color: #3498db; /* Soft blue color */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.line-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.line-content ul {
+  list-style-type: disc;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.line-content ul li {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.line-content a {
+  color: #3498db; /* Soft blue color */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.line-content a:hover {
+  color: #2980b9; /* Darker blue color on hover */
+}
+
+/* Footer */
+footer {
+  background-color: grey; /* Dark gray background */
+  color: #070a0c;
+  padding: 30px;
+  text-align: center;
+  clear: both; /* Clear floats */
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #040607;
+}
+
+footer a:hover {
+  color: #0e161b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-link {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
