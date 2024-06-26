@@ -18,10 +18,21 @@
   </header>
 
   <div class="container">
-    <h1>Packed Food Fact</h1>
+    <h1 id="element">Packed Food Fact</h1>
     <h2>Welcome to our site</h2>
     <p>Learn more about the food products you consume.</p>
   </div>
+
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Packed Food Fact', 'Search Your Favorite Food Items'],
+      typeSpeed: 100,
+      backSpeed: 75,
+      loop: true
+    });
+  </script>
+
+  
 
   <main class="main">
     <div class="section-link leftsection" onclick="window.location.href='food_products.html'">
